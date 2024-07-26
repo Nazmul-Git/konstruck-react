@@ -1713,7 +1713,8 @@ blockquote {
 		display: inline-block;
 		i{
 			&:before{
-				font-size: 16px;
+				font-size: 14px;
+				font-weight: 700;
 				color: $white-color;
 			}
 		}
@@ -5555,12 +5556,12 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -5568,12 +5569,12 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6549,7 +6550,7 @@ body {
 			background-repeat: no-repeat;
 			background-position: top left;
 			background-size: cover;
-			padding: 55px 70px 48px 70px;
+			padding: 55px 70px 78px 70px;
 			.prelements-heading{
 				.title-inner{
 					.title{
@@ -7443,27 +7444,32 @@ body {
 					top: 18px;
 					color: #7a7a7a;
 					font-size: 17px;
-					font-family: uicons-regular-rounded;
-					content: "\f2e1";
+					font-family: remixicon!important;
+					content: "\f264";
 				}
 				&.arrow2{
 					&:before{
-						content: "\f241";
+						content: "\efe9";
 					}
 				}
 				&.arrow3{
 					&:before{
-						content: "\f215";
+						content: "\eef6";
 					}
 				}
 				&.arrow4{
-					content: "\f241";
+					&:before{
+						content: "\ef14";
+					}
+				}
+				&.arrow5{
+					content: "\ea78";
 					&:before{
 						right: 20px;
 						top: 14px;
-						content: "\f107";
+						content: "\ea4e";
 						font-size: 20px;
-						font-family: FontAwesome;
+						font-family: remixicon!important;
 					}
 				}
 				.Services {
@@ -11076,6 +11082,8 @@ body {
 					}
 					.plus-team{
 						.social-icons{
+							display: flex;
+							flex-direction: column;
 							text-align: center;
 							margin-top: 14px;
 							position: absolute;
@@ -14474,13 +14482,13 @@ body {
 							color: $primary-color;
 						}
 						&:before{
-							content: "\f113";
+							content: "\ea6e";
 							left: 0;
 							top: 0;
 							color: #ffb703;
 							margin-right: 10px;
-							font-size: 13px;
-							font-family: Flaticon;
+							font-size: 16px;
+							font-family: remixicon !important;
 						}
 					}
 				}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolBar = () => {
+const ToolBar = ({ topBarModifyClass, phnNumber }) => {
     return (
         <>
-            <div className="toolbar-area topbar-style1 hidden-md">
+            <div className={`toolbar-area topbar-style1 ${topBarModifyClass ? topBarModifyClass : ''} hidden-md`}>
                 <div className="container">
                     <div className="row rs-vertical-middle">
                         <div className="col-lg-7">
@@ -14,10 +14,13 @@ const ToolBar = () => {
                                         <i className="ri-mail-send-line"></i>
                                         <Link to="mailto:info@konstruk.com">info@konstruk.com</Link>
                                     </li>
-                                    <li>
-                                        <i className="ri-phone-line"></i>
-                                        <Link to="tel:(+1)7854-333-222">(+1) 7854-333-222</Link>
-                                    </li>
+                                    {
+                                        phnNumber &&
+                                        <li>
+                                            <i className="ri-phone-line"></i>
+                                            <Link to="tel:(+1)7854-333-222">(+1) 7854-333-222</Link>
+                                        </li>
+                                    }
                                     <li>
                                         <i className="ri-map-pin-line"></i>
                                         31 New Street, NY, USA

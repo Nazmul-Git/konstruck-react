@@ -10,6 +10,7 @@ import PartnerSection from './PartnerSection';
 import TestimonialSection from './TestimonialSection';
 import ContactSection from './ContactSection';
 import BlogSection from './BlogSection';
+import CtaSection from './CtaSection';
 
 const Index3Main = () => {
     return (
@@ -22,9 +23,10 @@ const Index3Main = () => {
             <WhyChooseSection />
             <TeamSection />
             <PartnerSection />
-            {/* <TestimonialSection /> */}
+            <TestimonialSection />
             <ContactSection />
             <BlogSection />
+            <CtaSection />
         </>
     );
 };

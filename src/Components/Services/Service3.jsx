@@ -8,8 +8,18 @@ const Service3 = ({ service }) => {
                 <img src={service.img} alt="Services" />
             </div>
             <div className="services-text">
-                <h2 className="title"><Link to={service.link}>{service.title}</Link></h2>
-                <p className="services-txt">{service.description}</p>
+                {
+                    service.title1 && service.title2 &&
+                    <h2 className="title"> {service.title1} <br /> {service.title2}</h2>
+                }
+                {
+                    service.title &&
+                    <h2 className="title"><Link to={service.link}>{service.title}</Link></h2>
+                }
+                {
+                    service.description &&
+                    <p className="services-txt">{service.description}</p>   
+                }
             </div>
         </div>
     );

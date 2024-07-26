@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const BannerSlider = ({ slide, icon3, icon, contentClass }) => {
+const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass }) => {
     return (
 
         <div className={slide.imgClass} >
@@ -10,7 +10,7 @@ const BannerSlider = ({ slide, icon3, icon, contentClass }) => {
                 <div className="slider-inner">
                     <div className={`content-part ${contentClass ? contentClass : ''}`}>
                         {
-                            icon &&
+                            icon3 &&
                             <span className="sl-subtitle wow fadeInDown">
                                 <img className="sl-icons" src={icon3} alt="Images" />
                                 {slide.subtitle}
@@ -43,7 +43,7 @@ const BannerSlider = ({ slide, icon3, icon, contentClass }) => {
                             </p>
                         }
                         <div className="slider-bottom wow fadeinup">
-                            <Link className="readon more" to={slide.link}>{slide.btnName}</Link>
+                            <Link className={`readon ${btnClass ? btnClass : "more"}`} to={slide.link}>{slide.btnName}</Link>
                         </div>
                     </div>
                 </div>

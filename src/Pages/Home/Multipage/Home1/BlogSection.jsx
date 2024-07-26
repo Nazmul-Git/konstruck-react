@@ -104,6 +104,7 @@ const BlogSection = () => {
                             index={index}
                             blog={blog}
                             blogBtn={true}
+                            titleLast={true}
                         />
                     ))}
                 </Slider>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Footer = ({logo}) => {
+const Footer = ({ logo , footerStyle }) => {
     return (
-        <footer id="rs-footer" className="rs-footer footer-main-home">
+        <footer id="rs-footer" className={`rs-footer footer-main-home ${footerStyle ? footerStyle : ''}`}>
             <div className="footer-top">
                 <div className="container">
                     <div className="row">

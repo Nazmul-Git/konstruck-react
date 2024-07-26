@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn }) => {
+const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn, titleFirst, titleLast }) => {
     return (
         <div className="blog-item">
             <div className="image-wrap">
@@ -11,6 +11,12 @@ const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn }) => {
                 </Link>
             </div>
             <div className="blog-content">
+                {
+                    titleFirst &&
+                    <h3 className="blog-title">
+                        <Link to={blog.link}>{blog.title}</Link>
+                    </h3>
+                }
                 <ul className="blog-meta">
                     <li className="date">
                         <i className="ri-calendar-line"></i>
@@ -21,9 +27,12 @@ const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn }) => {
                         {blog.author}
                     </li>
                 </ul>
-                <h3 className="blog-title">
-                    <Link to={blog.link}>{blog.title}</Link>
-                </h3>
+                {
+                    titleLast &&
+                    <h3 className="blog-title">
+                        <Link to={blog.link}>{blog.title}</Link>
+                    </h3>
+                }
                 {
                     blog.desc &&
                     <p className="desc">{blog.desc}</p>

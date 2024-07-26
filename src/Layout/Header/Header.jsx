@@ -5,7 +5,7 @@ import ToolBar from './HeaderItems/ToolBar';
 import logo from '../../assets/images/logo.png';
 import MiddleHeader from './HeaderItems/MiddleHeader';
 
-const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon }) => {
+const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isSticky, setSticky] = useState(false);
 
@@ -41,7 +41,10 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                 }
                 {/* Toolbar Area Start */}
                 {
-                    topBarVisible && <ToolBar />
+                    topBarVisible && <ToolBar
+                        phnNumber={isPhnNumber}
+                        topBarModifyClass={topBarModifyClass}
+                    />
                 }
                 {/* Toolbar Area End */}
 
@@ -119,6 +122,17 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                                         {
                                             btnQuite2 &&
                                             <li className="btn-quote"><Link className="quote-button" to="#">Get A Quote<i className="ri-arrow-right-line"></i></Link></li>
+                                        }
+
+                                        {
+                                            callIcon &&
+                                            <li className="rs-contact-phone">
+                                                <i className="fi fi-rr-phone-call"></i>
+                                                <div className="phone-number">
+                                                    <span>Free Call</span>
+                                                    <Link to="tel:(+1)7854-333-222"> (+1) 7854-333-222</Link>
+                                                </div>
+                                            </li>
                                         }
 
                                         <li className="humburger">

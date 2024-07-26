@@ -104,6 +104,7 @@ const BlogSection = () => {
                             btnClass={'blog-bnt2'}
                             btnIcon={true}
                             blogBtn={true}
+                            titleLast={true}
                         />
                     ))}
                 </Slider>

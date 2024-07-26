@@ -66,34 +66,28 @@ const TestimonialSection = () => {
     };
 
     return (
-        <div id="rs-testimonial" className="rs-blog blog-main-home blog-modify2 bg5 pt-120 pb-115 md-pt-0 md-pb-80">
+        <div id="rs-testimonial" className="rs-testimonial testimonial-style3 bg3 pt-120 pb-120 md-pt-80 md-pb-80">
             <div className="container">
-                <div className="row">
-                    <div className="col-lg-6">
-                        <div className="sec-title2 mb-55 md-mb-35">
-                            <span className="sub-title">Latest News</span>
-                            <h2 className="title pb-25">
-                                Read latest updates
-                            </h2>
-                            <div className="heading-border-line left-style"></div>
-                        </div>
-                    </div>
-                    <div className="col-lg-6">
-                        <div className="btn-part text-right md-left md-mb-50">
-                            <Link className="readon more discover" to="/blog-single">View Updates</Link>
-                        </div>
-                    </div>
+                <div className="sec-title2 text-center mb-55 md-mb-35">
+                    <span className="sub-title">Testimonials</span>
+                    <h2 className="title pb-25">
+                        Customers reviews
+                    </h2>
+                    <div className="heading-border-line"></div>
                 </div>
-                <Slider {...settings}>
-                    {testimonials.map((testimonial, index) => (
-                        <Testimonial2
-                            key={index}
-                            testimonial={testimonial}
-                        />
-                    ))}
-                </Slider>
-            </div>
-        </div>
+                <div className="rs-carousel owl-carousel">
+
+                    <Slider {...settings}>
+                        {testimonials.map((testimonial, index) => (
+                            <Testimonial2
+                                key={index}
+                                testimonial={testimonial}
+                            />
+                        ))}
+                    </Slider>
+                </div>
+            </div >
+        </div >
     );
 }
 

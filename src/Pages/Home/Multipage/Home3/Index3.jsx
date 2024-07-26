@@ -4,6 +4,7 @@ import Header from '../../../../Layout/Header/Header';
 import Index3Main from './Index3Main';
 import Footer from '../../../../Layout/Footer/FooterMain';
 import logo from '../../../../assets/images/logo-white.png';
+import ScrollToTop from '../../../../Layout/ScrollToTop/ScrollToTop';
 
 const Index3 = () => {
     return (
@@ -14,6 +15,10 @@ const Index3 = () => {
                 topBarVisible={false}
                 searchIcon={true}
                 btnQuite1={true}
+            />
+            <ScrollToTop
+                bgColor={'#FFB703'}
+                hoverColor={'#010d14'}
             />
             <Index3Main />
             <Footer
