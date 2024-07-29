@@ -17,8 +17,23 @@ const Service3 = ({ service }) => {
                     <h2 className="title"><Link to={service.link}>{service.title}</Link></h2>
                 }
                 {
+                    service.h3Title &&
+                    <h3 className="title"><Link to={service.link}>{service.h3Title}</Link></h3>
+                }
+                {
+                    service.h4Title &&
+                    <h4 className="title">{service.h4Title}</h4>
+                }
+                
+                {
                     service.description &&
-                    <p className="services-txt">{service.description}</p>   
+                    <p className="services-txt">{service.description}</p>
+                }
+                {
+                    service.serviceBtn &&
+                    <div className="services-btn">
+                        <Link className="learn-text" to={service.link}>Learn More</Link>
+                    </div>
                 }
             </div>
         </div>

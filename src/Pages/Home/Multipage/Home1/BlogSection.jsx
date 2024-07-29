@@ -19,6 +19,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'We really appreciate content about the construction',
         link: '/blog-single',
+        btnName: 'Read More'
     },
     {
         image: blogImg2,
@@ -26,6 +27,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'Best practices construction law on construction',
         link: '/blog-single',
+        btnName: 'Read More'
     },
     {
         image: blogImg3,
@@ -33,6 +35,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'Although many people may overlook the need',
         link: '/blog-single',
+        btnName: 'Read More'
     },
     {
         image: blogImg4,
@@ -40,6 +43,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'Construction executive holds a very special place',
         link: '/blog-single',
+        btnName: 'Read More'
     },
     {
         image: blogImg5,
@@ -47,6 +51,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'This is another massive site with a ton of information',
         link: '/blog-single',
+        btnName: 'Read More'
     },
     {
         image: blogImg6,
@@ -54,6 +59,7 @@ const blogPosts = [
         author: 'Admin',
         title: 'The construction business the owner site is jam-packed',
         link: '/blog-single',
+        btnName: 'Read More'
     },
 ];
 

@@ -14,6 +14,9 @@ const Index1 = () => {
                 normalLogo={headerLogoNormal}
                 darkLogo={headerLogoNormal}
                 topBarVisible={true}
+                mail={true}
+                isPhnNumber={true}
+                address={true}
                 searchIcon={true}
                 btnQuite1={true}
             />

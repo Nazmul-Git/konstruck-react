@@ -19,42 +19,48 @@ const blogData = [
         title: 'We really appreciate content about the construction',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
     {
         image: img2,
         title: 'Best practices construction law on construction',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
     {
         image: img3,
         title: 'Although many people may overlook the need',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
     {
         image: img4,
         title: 'Construction executive holds a very special place',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
     {
         image: img5,
         title: 'This is another massive sites with a ton of information',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
     {
         image: img6,
         title: 'The construction business the owner site is jam-packed',
         date: '26 April 2022',
         link: 'blog-single',
-        author: 'Admin'
+        author: 'Admin',
+        btnName: 'Read More'
     },
 ];
 

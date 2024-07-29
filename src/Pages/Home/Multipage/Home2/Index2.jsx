@@ -16,6 +16,7 @@ const Index2 = () => {
                 searchIcon={true}
                 socialIcon={true}
                 middleHeader={true}
+                logoMidl={headerLogoNormal}
                 btnQuite2={true}
             />
             <ScrollToTop

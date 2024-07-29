@@ -18,14 +18,26 @@ const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn, titleFirst, titleLa
                     </h3>
                 }
                 <ul className="blog-meta">
-                    <li className="date">
-                        <i className="ri-calendar-line"></i>
-                        {blog.date}
-                    </li>
-                    <li className="admin">
-                        <i className="ri-user-fill"></i>
-                        {blog.author}
-                    </li>
+                    {
+                        blog.date &&
+                        <li className="date">
+                            <i className="ri-calendar-line"></i>
+                            {blog.date}
+                        </li>
+                    }
+                    {
+                        blog.author &&
+                        <li className="admin">
+                            <i className="ri-user-fill"></i>
+                            {blog.author}
+                        </li>
+                    }
+                    {
+                        blog.category &&
+                        <li className="category">
+                            <i className="ri-book-fill"></i>{blog.category}
+                        </li>
+                    }
                 </ul>
                 {
                     titleLast &&
@@ -40,7 +52,7 @@ const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn, titleFirst, titleLa
                 {
                     blogBtn &&
                     <div className={`blog-button ${btnClass ? btnClass : ""}`}>
-                        <Link to={blog.link}>Read More</Link>
+                        <Link to={blog.link}>{blog.btnName}</Link>
                         {
                             btnIcon &&
                             <i className="ri-arrow-right-line"></i>

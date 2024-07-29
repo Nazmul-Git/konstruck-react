@@ -9,7 +9,7 @@ const ProjectCard = ({ project, index }) => {
             </div>
             <div className="project-content">
                 <div className="p-icon">
-                    <Link to={project.link}><i className="ri-arrow-right-line"></i></Link>
+                    <Link to={project.link}><i className="ri-arrow-right-up-line"></i></Link>
                 </div>
                 <div className="project-inner">
                     <h3 className="title"><Link to={project.link}>{project.title}</Link></h3>

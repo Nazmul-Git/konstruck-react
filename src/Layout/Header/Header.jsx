@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import MenuItems from './HeaderItems/MenuItems';
 import ToolBar from './HeaderItems/ToolBar';
-import logo from '../../assets/images/logo.png';
 import MiddleHeader from './HeaderItems/MiddleHeader';
+import RightMenuToggle from './HeaderItems/RightToggleMenu';
 
-const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon }) => {
+const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon, otherClass, modifyClassMidl, logoMidl, mail, address, textOnly, boxLayout }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isSticky, setSticky] = useState(false);
+    const [navExpanded, setNavExpanded] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 70) {
@@ -20,6 +21,21 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
         setSearchValue(event.target.value);
     };
 
+    const handleToggleMobileMenu = () => {
+        setNavExpanded(!navExpanded);
+        if (!navExpanded) {
+            document.body.classList.add('nav-expanded');
+        } else {
+            document.body.classList.remove('nav-expanded');
+        }
+    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.body.classList.remove('nav-expanded');
+        };
+    }, []);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -32,25 +48,30 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
     return (
         <div className="full-width-header">
             {/* Header Start */}
-            <header id="rs-header" className={`rs-header ${headerStyle ? headerStyle : ''}`}>
-                {
-                    middleHeader &&
-                    <MiddleHeader
-                        logo={logo}
-                    />
-                }
+            <header id="rs-header" className={`rs-header ${headerStyle ? headerStyle : ''} ${otherClass ? otherClass : ''}`}>
                 {/* Toolbar Area Start */}
                 {
                     topBarVisible && <ToolBar
                         phnNumber={isPhnNumber}
                         topBarModifyClass={topBarModifyClass}
+                        mail={mail}
+                        address={address}
+                        textOnly={textOnly}
                     />
                 }
+                {
+                    middleHeader &&
+                    <MiddleHeader
+                        logo={logoMidl}
+                        modifyClassMidl={modifyClassMidl}
+                    />
+                }
+
                 {/* Toolbar Area End */}
 
                 {/* Menu Start */}
                 <div className={`menu-area menu-sticky ${isSticky ? 'sticky' : ''}`} >
-                    <div className="container">
+                    <div className={`container ${boxLayout ? boxLayout : ''}`}>
                         <div className="row-table">
                             <div className="col-cell header-logo">
                                 <div className="logo-area">
@@ -135,7 +156,7 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                                             </li>
                                         }
 
-                                        <li className="humburger">
+                                        <li className="humburger" onClick={handleToggleMobileMenu}>
                                             <Link id="nav-expander" className="nav-expander bar" to="#">
                                                 <div className="bar">
                                                     <span className="dot1"></span>
@@ -158,6 +179,9 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                 </div>
                 {/* Menu End */}
             </header>
+            <RightMenuToggle
+                handleToggleMobileMenu={handleToggleMobileMenu}
+            />
         </div>
     );
 };

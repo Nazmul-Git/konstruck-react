@@ -5,9 +5,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import quoteImg from '../../../../assets/images/testimonial/style1/quote.png';
 import shape1 from '../../../../assets/images/shape-1.png';
-
 import Team from '../../../../Components/Team/Team';
 import Partner from '../../../../Components/Partner/Partner';
+import Testimonial from '../../../../Components/Testimonial/Testimonial';
+
 // Import images
 import testi1 from '../../../../assets/images/testimonial/style1/testi1.jpg';
 import testi2 from '../../../../assets/images/testimonial/style1/testi2.jpg';
@@ -26,7 +27,6 @@ import img4 from '../../../../assets/images/partner/style1/4.png';
 import img5 from '../../../../assets/images/partner/style1/5.png';
 import img6 from '../../../../assets/images/partner/style1/6.png';
 import img7 from '../../../../assets/images/partner/style1/7.png';
-import Testimonial from '../../../../Components/Testimonial/Testimonial';
 
 const TestimonialSection = () => {
     const mainSlider = useRef(null);
@@ -65,38 +65,38 @@ const TestimonialSection = () => {
             name: 'Davis Youn',
             title: 'Architecture',
             image: tm1,
-            link: '/team-single'
+            link: '/team-single',
         },
         {
             name: 'Eng Forhad Ahmad',
             title: 'Project Manager',
             image: tm2,
-            link: '/team-single'
+            link: '/team-single',
         },
         {
             name: 'Masud Maria',
             title: 'Foreman',
             image: tm3,
-            link: '/team-single'
+            link: '/team-single',
         },
         {
             name: 'Shahinur Islam',
             title: 'Construction Worker',
             image: tm4,
-            link: '/team-single'
+            link: '/team-single',
         },
         {
             name: 'Abdur Rashid',
             title: 'CEO & Engineer',
             image: tm5,
-            link: '/team-single'
+            link: '/team-single',
         },
         {
             name: 'Deluar Hossen',
             title: 'Builder Advisor',
             image: tm6,
-            link: '/team-single'
-        }
+            link: '/team-single',
+        },
     ];
 
     // Partner logos data
@@ -111,7 +111,7 @@ const TestimonialSection = () => {
     ];
 
     // Partner slider settings
-    const settings = {
+    const partnerSettings = {
         dots: false,
         arrows: false, // Turn off arrows
         infinite: true,
@@ -145,7 +145,6 @@ const TestimonialSection = () => {
         ],
     };
 
-
     const mainSettings = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -159,7 +158,6 @@ const TestimonialSection = () => {
         slidesToScroll: 1,
         asNavFor: mainSlider.current,
         dots: false,
-        centerMode: true,
         focusOnSelect: true,
         vertical: true,
     };
@@ -211,16 +209,15 @@ const TestimonialSection = () => {
                                 <div className="slick-part single-product-slider">
                                     <Slider {...mainSettings} ref={mainSlider} className="slider slider-for">
                                         {teamMembers.map((member, index) => (
-                                            <Team
-                                                key={index}
-                                                member={member}
-                                            />
+                                            <Team key={index} member={member} />
                                         ))}
                                     </Slider>
                                     <Slider {...navSettings} ref={navSlider} className="slider slider-nav">
                                         {teamMembers.map((member, index) => (
                                             <div className="images-list" key={index}>
-                                                <Link to="#"><img src={member.image} alt="Team" /></Link>
+                                                <Link to="#">
+                                                    <img src={member.image} alt="Team" />
+                                                </Link>
                                             </div>
                                         ))}
                                     </Slider>
@@ -232,12 +229,9 @@ const TestimonialSection = () => {
                 <div className="rs-partner partner-main-home pt-100 md-pt-70">
                     <div className="container">
                         <div className="partner-content-widget">
-                            <Slider {...settings}>
+                            <Slider {...partnerSettings}>
                                 {partners.map((partner, index) => (
-                                    <Partner
-                                        key={index}
-                                        partner={partner}
-                                    />
+                                    <Partner key={index} partner={partner} />
                                 ))}
                             </Slider>
                         </div>

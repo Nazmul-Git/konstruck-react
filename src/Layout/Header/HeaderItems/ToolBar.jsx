@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolBar = ({ topBarModifyClass, phnNumber }) => {
+const ToolBar = ({ topBarModifyClass, phnNumber, mail, address, textOnly }) => {
     return (
         <>
             <div className={`toolbar-area topbar-style1 ${topBarModifyClass ? topBarModifyClass : ''} hidden-md`}>
@@ -10,10 +10,13 @@ const ToolBar = ({ topBarModifyClass, phnNumber }) => {
                         <div className="col-lg-7">
                             <div className="toolbar-contact">
                                 <ul className="rs-contact-info">
-                                    <li>
-                                        <i className="ri-mail-send-line"></i>
-                                        <Link to="mailto:info@konstruk.com">info@konstruk.com</Link>
-                                    </li>
+                                    {
+                                        mail &&
+                                        <li>
+                                            <i className="ri-mail-send-line"></i>
+                                            <Link to="mailto:info@konstruk.com">info@konstruk.com</Link>
+                                        </li>
+                                    }
                                     {
                                         phnNumber &&
                                         <li>
@@ -21,10 +24,17 @@ const ToolBar = ({ topBarModifyClass, phnNumber }) => {
                                             <Link to="tel:(+1)7854-333-222">(+1) 7854-333-222</Link>
                                         </li>
                                     }
-                                    <li>
-                                        <i className="ri-map-pin-line"></i>
-                                        31 New Street, NY, USA
-                                    </li>
+                                    {
+                                        address &&
+                                        <li>
+                                            <i className="ri-map-pin-line"></i>
+                                            31 New Street, NY, USA
+                                        </li>
+                                    }
+                                    {
+                                        textOnly &&
+                                        <li> Welcome To Konstruk Company  </li>
+                                    }
                                 </ul>
                             </div>
                         </div>

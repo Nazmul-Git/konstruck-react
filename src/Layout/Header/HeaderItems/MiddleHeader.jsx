@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MiddleHeader = ({logo}) => {
+const MiddleHeader = ({ logo, modifyClassMidl }) => {
     return (
-        <div className="middle-header hidden-md">
+        <div className={`middle-header ${modifyClassMidl ? modifyClassMidl : ''} hidden-md`}>
             <div className="container">
                 <div className="row-table">
                     <div className="col-cell header-logo">

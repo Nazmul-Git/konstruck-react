@@ -118,7 +118,7 @@ const ContactSection = () => {
                                     <div className={`select-selected ${select ? 'select-arrow-active' : ''}`} onClick={handleClickOption}>
                                         {formData.service || 'Select a Service'}
                                     </div>
-                                    <div className={`select-items ${select ? '' : 'select-hide'}`}>
+                                    <div className={`select-items ${select ? '' : 'select-hide'}`}> 
                                         <div onClick={() => { setFormData({ ...formData, service: 'General construction' }); setSelect(false) }}>General construction</div>
                                         <div onClick={() => { setFormData({ ...formData, service: 'Modified Roofing' }); setSelect(false) }}>Modified Roofing</div>
                                         <div onClick={() => { setFormData({ ...formData, service: 'Metal Roofing' }); setSelect(false) }}>Metal Roofing</div>

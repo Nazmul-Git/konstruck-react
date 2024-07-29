@@ -13,6 +13,8 @@ const Index4 = () => {
                 normalLogo={headerLogoNormal}
                 darkLogo={headerLogoNormal}
                 topBarVisible={true}
+                mail={true}
+                address={true}
                 isPhnNumber={false}
                 headerStyle='header-style2'
                 topBarModifyClass='topber-modify1'

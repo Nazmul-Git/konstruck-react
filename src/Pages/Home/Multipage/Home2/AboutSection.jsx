@@ -71,6 +71,7 @@ const AboutSection = () => {
                             <Services
                                 key={index}
                                 service={service}
+                                serviceTitle1={true}
                             />
                         ))}
                     </Slider>

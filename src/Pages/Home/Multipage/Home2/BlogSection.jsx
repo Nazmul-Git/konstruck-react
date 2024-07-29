@@ -16,7 +16,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'We really appreciate content about the construction',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         },
         {
             image: blog2,
@@ -24,7 +25,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'Best practices construction law on construction',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         },
         {
             image: blog3,
@@ -32,7 +34,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'Although many people may overlook the need',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         },
         {
             image: blog4,
@@ -40,7 +43,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'Construction executive holds a very special place',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         },
         {
             image: blog5,
@@ -48,7 +52,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'This is another massive sites with a ton of information',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         },
         {
             image: blog6,
@@ -56,7 +61,8 @@ const BlogSection = () => {
             author: 'Admin',
             title: 'The construction business the owner site is jam-packed',
             desc: 'The brand has responded by partnering with skincare experts on...',
-            link: '/blog-single'
+            link: '/blog-single',
+            btnName: 'Read More'
         }
     ];
     const settings = {
@@ -96,7 +102,7 @@ const BlogSection = () => {
                     <h2 className="title">Our latest news post<br />and articles</h2>
                 </div>
                 <Slider {...settings}>
-                    {blogItems.map((blog, index)=> (
+                    {blogItems.map((blog, index) => (
                         <BlogCard
                             key={index}
                             index={index}

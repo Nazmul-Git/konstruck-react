@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const ProgressBar = ({ duration, targetProgress, barBgClass, bgBarProgressColor, title, bgBarColor, height, barPercentageText }) => {
+const ProgressBar = ({ duration, targetProgress, barBgClass, bgBarProgressColor, title, bgBarColor, height, barPercentageText, item_margin_bottom }) => {
     const [progress, setProgress] = useState(0);
 
     useEffect(() => {
@@ -32,11 +32,10 @@ const ProgressBar = ({ duration, targetProgress, barBgClass, bgBarProgressColor,
     return (
         <div
             style={{
-                marginTop: '12px' || { item_margin_bottom }
+                marginTop: '8px' || { item_margin_bottom }
             }}
         >
             <div className='d-flex justify-content-between align-items-center gap-2'>
-
                 <div
                     className="cl-skill-bar"
                     style={{
@@ -67,11 +66,10 @@ const ProgressBar = ({ duration, targetProgress, barBgClass, bgBarProgressColor,
                     >
                     </div>
                 </div>
-                <span className="skill-bar-percent">
+                <span className="skill-bar-percent text-white">
                     {!barPercentageText ? '' : `${targetProgress}%`}
                 </span>
             </div>
-
         </div>
     );
 };

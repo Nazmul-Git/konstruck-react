@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass }) => {
+const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass, titleClassh1, descClass, slideLayer }) => {
     return (
 
         <div className={slide.imgClass} >
@@ -20,7 +20,7 @@ const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass }) => {
                             slide.smallSubTitle &&
                             <span className="sl-subtitle wow fadeInDown">{slide.smallSubTitle}</span>
                         }
-                        <h1 className="sl-title wow fadeInLeft">
+                        <h1 className={`${titleClassh1 ? titleClassh1 : "sl-title wow fadeInLeft"}`}>
                             {slide.title1}
                             {
                                 slide.title2 &&
@@ -36,7 +36,7 @@ const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass }) => {
                         }
                         {
                             slide.description1 || slide.description2 &&
-                            <p className="sl-desc wow fadeInLeft2">
+                            <p className={`${descClass ? descClass : "sl-desc wow fadeInLeft2"}`}>
                                 {slide.description1}
                                 <br />
                                 {slide.description2}
@@ -45,6 +45,10 @@ const BannerSlider = ({ slide, icon3, icon, contentClass, btnClass }) => {
                         <div className="slider-bottom wow fadeinup">
                             <Link className={`readon ${btnClass ? btnClass : "more"}`} to={slide.link}>{slide.btnName}</Link>
                         </div>
+                        {
+                            slideLayer &&
+                            <div className="slide-layer"></div>
+                        }
                     </div>
                 </div>
             </div>

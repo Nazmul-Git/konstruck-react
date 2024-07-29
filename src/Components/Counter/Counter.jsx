@@ -1,11 +1,17 @@
 import React from 'react';
 import CountUp from 'react-countup';
 
-const Counter = ({ counter }) => {
+const Counter = ({ counter, counterTextClass, counterNumClass }) => {
     return (
         <div className="rs-counter-list">
-            <div className="count-text">
-                <div className="count-number">
+            {
+                counter.icon &&
+                <div className="counter-icon">
+                    <img src={counter.icon} alt={counter.alt} />
+                </div>
+            }
+            <div className={`${counterTextClass ? counterTextClass : "count-text"}`}>
+                <div className={`${counterNumClass ? counterNumClass : "count-number"}`}>
                     <CountUp end={counter.count} duration={5} className="rs-count" />
                     <span className="prefix">+</span>
                 </div>

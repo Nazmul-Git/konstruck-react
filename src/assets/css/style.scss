@@ -564,9 +564,9 @@ button{
             i{
                 color: #000000;
                 background-color: #FFB703;
-                padding: 15px 15px 15px 15px;
+                padding: 15px;
                 margin: 0px 25px 0px 0px;
-                border-radius: 50px 50px 50px 50px;
+                border-radius: 50%;
 				font-weight: 700;
             }
             .feature-text{
@@ -1571,7 +1571,7 @@ blockquote {
 					padding-left: 6px;
 					color: $white-color;
 					font-size: 20px;
-					top: 5px;
+					top: 2px;
 					display: inline-block;
 					transition: all .3s ease
 				}
@@ -1678,16 +1678,18 @@ blockquote {
 	}
 	.learn-text{
 		position: relative;
-		display: inline-block;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		color: #fff;
 		font-size: 14px;
 		font-weight: 500;
 		text-transform: uppercase;
 		transition: all ease .4s;
 		&:after{
-			content: "\f113";
-			font-family: Flaticon;
-			font-size: 9px;
+			content: "\ea54";
+			font-family: remixicon!important;
+			font-size: 20px;
 			position: relative;
 			right: -1px;
 			top: -2px;
@@ -1822,7 +1824,9 @@ blockquote {
 	&.blog-btn4{
 		a{
 			position: relative;
-			display: inline-block;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 			padding: 9px 28px 9px 25px;
 			background: $red-color2;
 			color: #fff;
@@ -1831,17 +1835,16 @@ blockquote {
 			text-transform: capitalize;
 			transition: all ease .4s;
 			&:after{
-				content: "\f113";
-				font-family: Flaticon;
-				font-size: 10px;
+				content: "\ea6e";
+				font-family: remixicon!important;
+				font-size: 20px;
 				position: relative;
 				right: 1px;
 				top: -1px;
-				display: inline-block;
 				margin-left: 8px;
 				transition: all ease .4s;
 				color: #fff;
-				font-weight: 700;
+				font-weight: 500;	
 			}
 			&:hover{
 				&:after{
@@ -3746,7 +3749,9 @@ blockquote {
 			    font-weight: 500;
 			    text-transform: uppercase;
 			   	padding: 20px 29px;
-			   	display: block;
+			   	display: flex;
+				flex-direction: row;
+				align-items: center;
 			    position: relative;
 			    top: 0;
 			    background: #ffb703;
@@ -3759,7 +3764,6 @@ blockquote {
 				transform: translateX(0px);
 				color: #010d14;
 				font-size: 20px;
-				top: 4px;
 				display: inline-block;
 				transition: all .3s ease;
 			}
@@ -4320,7 +4324,8 @@ blockquote {
 					display: inline-block;
 					a{
 						i{
-							font-size: 15px;
+							font-size: 18px;
+							padding: 8px;
 							color: #fff;
 							margin: 0 8px 0 0;
 							text-align: center;
@@ -5235,7 +5240,7 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
@@ -5248,7 +5253,7 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
@@ -5365,7 +5370,7 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
@@ -5378,7 +5383,7 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
@@ -5453,7 +5458,7 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 26px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $title-color;
 					    margin: 0;
@@ -5466,7 +5471,7 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 26px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $title-color;
 					    margin: 0;
@@ -5650,12 +5655,12 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -5663,12 +5668,12 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -5749,12 +5754,12 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -5762,12 +5767,12 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -10875,7 +10880,7 @@ body {
 						flex: 0 0 35.2%;
 						max-width: 35.2%;
 						padding-left: 30px;
-						margin-top: -50px;
+						margin-top: -40px;
 						.images-list{
 							margin-bottom: 30px;
 							a{
@@ -10900,7 +10905,7 @@ body {
 						transition: 0.6s ease all;
 						z-index: 9;
 						&.slick-next{
-							top: 115.1%;
+							top: 111.01%;
 							right: -30px;
 						    &:before{
 						        content: "\ea6c";
@@ -10914,8 +10919,9 @@ body {
 						    }
 						}
 						&.slick-prev{
-							top: 115.1%;
+							top: 111.01%;
 							right: 26px;
+							left:106px;
 						    &:before{
 						        content: "\ea60";
 						        font-size: 18px;
@@ -12934,6 +12940,7 @@ body {
 					&.slick-prev{
 						top: 104.1%;
 						right: 16px;
+						left: 420px;
 					    &:before{
 					        content: "\ea60";
 					        font-size: 20px;
@@ -13115,6 +13122,7 @@ body {
 	        background-color: #00000094;
 	        padding: 90px 33px 45px 46px;
 	        margin: 0 -8px 0 -8px;
+			position: relative;
 	        .item-content{
 	            .desc{
 	                font-size: 17px;
