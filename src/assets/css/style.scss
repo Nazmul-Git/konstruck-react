@@ -1596,11 +1596,11 @@ blockquote {
 			background: transparent;
 			i{
 				&:before{
-					font-weight: 400;
+					font-weight: 700;
 					position: relative;
 					padding-left: 6px;
 					color: $title-color;
-					font-size: 18px;
+					font-size: 28px;
 					top: 3px;
 					display: inline-block;
 					transition: all .3s ease
@@ -1609,7 +1609,7 @@ blockquote {
 			&:hover{
 				i{
 					&:before{
-						transform: translateX(3px);
+						transform: translateX(5px);
 					}
 				}
 			}
@@ -1620,7 +1620,7 @@ blockquote {
 			i{
 				color: #858585;
 				&:before{
-					font-size: 16px;
+					font-size: 26px;
 				}
 			}
 			&:hover{
@@ -4745,21 +4745,17 @@ body {
 					textarea{
 					    height: 120px;
 					}
-					::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-					  color: #fff;
-					  opacity: 0.79;
+					::-webkit-input-placeholder { 
+					  opacity: 0.89;
 					}
-					::-moz-placeholder { /* Firefox 19+ */
-					  color:#fff;
-					  opacity: 0.79;
+					::-moz-placeholder { 
+					  opacity: 0.89;
 					}
-					:-ms-input-placeholder { /* IE 10+ */
-					  color: #fff;
-					  opacity: 0.79;
+					:-ms-input-placeholder { 
+					  opacity: 0.89;
 					}
-					:-moz-placeholder { /* Firefox 18- */
-					  color: #fff;
-					  opacity: 0.79;
+					:-moz-placeholder { 
+					  opacity: 0.89;
 					} 
 				}
 			}
@@ -5883,8 +5879,8 @@ body {
 	            visibility: hidden;
 	            i {
 	                &:before {
-	                    content: "\f112";
-	                    font-family: Flaticon;
+	                    content: "\ea64";
+	                    font-family: remixicon!important;
 	                    font-size: 20px;
 	                    margin-right: 3px;
 	                }
@@ -5899,7 +5895,7 @@ body {
 	            left: unset;
 	            i {
 	                &:before {
-	                    content: "\f113";
+	                    content: "\ea64";
 	                    margin-right: 0;
 	                    margin-left: 3px;
 	                }
@@ -5991,12 +5987,12 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6004,12 +6000,12 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6079,12 +6075,12 @@ body {
 					right: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6092,12 +6088,12 @@ body {
 					left: 2%;
 					top: 50%;
 					&:before{
-					    font-size: 18px;
+					    font-size: 28px;
 					    font-weight: 800;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6183,12 +6179,12 @@ body {
 					left: 2%;
 					top: 53%;
 					&:before{
-					    font-size: 16px;
+					    font-size: 26px;
 					    font-weight: 700;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f113";
-					    font-family: Flaticon;
+					    content: "\ea6e";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}
@@ -6196,12 +6192,12 @@ body {
 					left: 2%;
 					top: 47%;
 					&:before{
-					    font-size: 16px;
+					    font-size: 26px;
 					    font-weight: 700;
 					    color: $white-color;
 					    margin: 0;
-					    content: "\f112";
-					    font-family: Flaticon;
+					    content: "\ea64";
+					    font-family: remixicon!important;
 					    text-align: center;
 					}
 				}

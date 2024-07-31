@@ -5,7 +5,7 @@ const MenuItems = () => {
     return (
         <>
             <li className="menu-item-has-children current-menu-item">
-                <Link to="/index-01">Home</Link>
+                <Link to="#">Home</Link>
                 <ul className="sub-menu">
                     <li className="menu-item-has-children current-menu-item">
                         <Link to="#">Multipages</Link>

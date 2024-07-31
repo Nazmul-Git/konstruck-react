@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const Counter = ({ counter, counterTextClass, counterNumClass }) => {
     return (
-        <div className="rs-counter-list">
+        <div className={`rs-counter-list ${counter.border ? counter.border : ''}`}>
             {
                 counter.icon &&
                 <div className="counter-icon">

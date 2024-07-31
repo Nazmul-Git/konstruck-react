@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ContactForm = ({ handleChange, handleSubmit, formData }) => {
-    const { name, email, phone,website, message } = formData;
-    
+const ContactForm = ({ handleChange, handleSubmit, formData, websiteField }) => {
+    const { name, email, phone, website, message } = formData;
+
     return (
         <form id="contact-form" onSubmit={handleSubmit}>
             <div className="row">
@@ -42,18 +42,22 @@ const ContactForm = ({ handleChange, handleSubmit, formData }) => {
                         required
                     />
                 </div>
-                <div className="col-lg-6 col-md-6 col-sm-6 mb-30">
-                    <input
-                        className="from-control"
-                        type="text"
-                        id="website"
-                        name="website"
-                        placeholder="Your Website"
-                        value={website}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
+                {
+                    websiteField &&
+
+                    <div className="col-lg-6 col-md-6 col-sm-6 mb-30">
+                        <input
+                            className="from-control"
+                            type="text"
+                            id="website"
+                            name="website"
+                            placeholder="Your Website"
+                            value={website}
+                            onChange={handleChange}
+                            required
+                        />
+                    </div>
+                }
                 <div className="col-lg-12 mb-30">
                     <textarea
                         className="from-control"

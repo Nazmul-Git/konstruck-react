@@ -36,7 +36,7 @@ const WhyChooseSection = () => {
                                             bgBarColor={'#E8EAEE'}
                                             bgBarProgressColor={'#FFB703'}
                                             duration={2000}
-                                            barPercentageText={skill.percent}
+                                            barPercentageText={true}
                                         />
                                     </div>
 

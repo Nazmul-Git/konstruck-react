@@ -1,13 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Service3 = ({ service }) => {
+const Service3 = ({ service, serviceImageClass, serviceMainCls, serviceContCls, withAncor, btnStyle, linkCls, btnIcon }) => {
     return (
-        <div className="services-item">
-            <div className="services-icon">
-                <img src={service.img} alt="Services" />
+        <div className={`${serviceMainCls ? serviceMainCls : "services-item"}`}>
+            <div className={`${serviceImageClass ? serviceImageClass : "services-icon"}`}>
+                {
+                    service.img && withAncor ?
+                        <Link to={service.link}><img src={service.img} alt="Images" /></Link> :
+                        <img src={service.img} alt="Services" />
+                }
             </div>
-            <div className="services-text">
+            <div className={`${serviceContCls ? serviceContCls : "services-text"}`}>
                 {
                     service.title1 && service.title2 &&
                     <h2 className="title"> {service.title1} <br /> {service.title2}</h2>
@@ -21,18 +25,24 @@ const Service3 = ({ service }) => {
                     <h3 className="title"><Link to={service.link}>{service.h3Title}</Link></h3>
                 }
                 {
-                    service.h4Title &&
-                    <h4 className="title">{service.h4Title}</h4>
+                    service.h4Title && withAncor ?
+                        <h4 className="title"><Link to={service.link}>{service.h4Title}</Link></h4> :
+                        <h4 className="title">{service.h4Title}</h4>
                 }
-                
+
                 {
                     service.description &&
                     <p className="services-txt">{service.description}</p>
                 }
                 {
-                    service.serviceBtn &&
-                    <div className="services-btn">
-                        <Link className="learn-text" to={service.link}>Learn More</Link>
+                    service.serviceBtn || btnIcon &&
+                    <div className={`services-btn ${btnStyle ? btnStyle : ''}`}>
+                        <Link className={`${linkCls ? linkCls : "learn-text"}`} to={service.link}>{service.serviceBtn}
+                            {
+                                btnIcon &&
+                                <i className="fi fi-rr-arrow-small-right"></i>
+                            }
+                        </Link>
                     </div>
                 }
             </div>

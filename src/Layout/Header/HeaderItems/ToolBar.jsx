@@ -1,15 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ToolBar = ({ topBarModifyClass, phnNumber, mail, address, textOnly }) => {
+const ToolBar = ({ topBarModifyClass, phnNumber, mail, address, textOnly, phnNumberFirst, containerFluid }) => {
     return (
         <>
             <div className={`toolbar-area topbar-style1 ${topBarModifyClass ? topBarModifyClass : ''} hidden-md`}>
-                <div className="container">
+                <div className={`container${containerFluid && containerFluid}`}>
                     <div className="row rs-vertical-middle">
                         <div className="col-lg-7">
                             <div className="toolbar-contact">
                                 <ul className="rs-contact-info">
+                                    {
+                                        phnNumberFirst &&
+                                        <li>
+                                            <i className="ri-phone-line"></i>
+                                            <Link to="tel:(+1)7854-333-222">(+1) 7854-333-222</Link>
+                                        </li>
+                                    }
                                     {
                                         mail &&
                                         <li>

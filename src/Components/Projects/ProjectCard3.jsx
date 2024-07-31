@@ -9,8 +9,8 @@ const ProjectCard3 = ({ project }) => {
             </div>
             <div className="project-content">
                 <div className="project-inner">
-                    <span className="category"><a href="projects-single.html">{project.category}</a></span>
-                    <h3 className="title"><Link to="/projects-single">{project.title}</Link></h3>
+                    <span className="category"><Link to={project.link}>{project.category}</Link></span>
+                    <h3 className="title"><Link to={project.link}>{project.title}</Link></h3>
                 </div>
             </div>
         </div>

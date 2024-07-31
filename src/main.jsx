@@ -25,7 +25,7 @@ import Index14 from './Pages/Home/Multipage/Home14/Index14';
 import Index15 from './Pages/Home/Multipage/Home15/Index15';
 
 const router = createBrowserRouter([
-  { path: "/",  element: <Index1/> },
+  { path: "*",  element: <Index1/> },
   { path: "/index-01",  element: <Index1/> },
   { path: "/index-02",  element: <Index2/> },
   { path: "/index-03",  element: <Index3/> },

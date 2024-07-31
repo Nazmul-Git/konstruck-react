@@ -9,7 +9,7 @@ const Service6 = ({ service }) => {
             <div className="services-text">
                 {
                     service.h4Title &&
-                    <h4 className="title">{service.title}</h4>
+                    <h4 className="title">{service.h4Title}</h4>
                 }
                 {
                     service.h5Title &&

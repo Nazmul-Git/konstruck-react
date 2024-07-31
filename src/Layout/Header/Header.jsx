@@ -5,7 +5,7 @@ import ToolBar from './HeaderItems/ToolBar';
 import MiddleHeader from './HeaderItems/MiddleHeader';
 import RightMenuToggle from './HeaderItems/RightToggleMenu';
 
-const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon, otherClass, modifyClassMidl, logoMidl, mail, address, textOnly, boxLayout }) => {
+const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon, otherClass, modifyClassMidl, logoMidl, mail, address, textOnly, boxLayout,btnQuite1Icon, containerFluid, phnNumberFirst }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isSticky, setSticky] = useState(false);
     const [navExpanded, setNavExpanded] = useState(false);
@@ -57,6 +57,8 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                         mail={mail}
                         address={address}
                         textOnly={textOnly}
+                        phnNumberFirst={phnNumberFirst}
+                        containerFluid={containerFluid}
                     />
                 }
                 {
@@ -71,7 +73,7 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
 
                 {/* Menu Start */}
                 <div className={`menu-area menu-sticky ${isSticky ? 'sticky' : ''}`} >
-                    <div className={`container ${boxLayout ? boxLayout : ''}`}>
+                    <div className={`container${containerFluid && containerFluid} ${boxLayout ? boxLayout : ''}`}>
                         <div className="row-table">
                             <div className="col-cell header-logo">
                                 <div className="logo-area">
@@ -138,7 +140,14 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                                         }
                                         {
                                             btnQuite1 &&
-                                            <li className="btn-quote"><Link className="quote-button" to="#">Let's Talk</Link></li>
+                                            <li className="btn-quote">
+                                                <Link className="quote-button" to="#">
+                                                    Let's Talk
+                                                    {
+                                                        btnQuite1Icon &&
+                                                        <i className="ri-arrow-right-line"></i>
+                                                    }
+                                                </Link></li>
                                         }
                                         {
                                             btnQuite2 &&
