@@ -18,9 +18,9 @@ const Team4 = ({ member }) => {
                 </div>
                 <div className="plus-team">
                     <div className="social-icons">
-                        {member.social.map((social, index) => (
-                            <Link key={index} to={social.url}>
-                                <i className={`ri-${social.platform}-fill`}></i>
+                        {member.social.map((item, index) => (
+                            <Link key={index} to={item.url}>
+                                <i className={`ri-${item.icon}-fill`}></i>
                             </Link>
                         ))}
                     </div>

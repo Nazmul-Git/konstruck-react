@@ -3,7 +3,6 @@ import headerLogoNormal from "../../../../assets/images/logo-white2.png";
 import Header from '../../../../Layout/Header/Header';
 import Index11Main from './Index11Main';
 import Footer from '../../../../Layout/Footer/FooterMain';
-import footerLogo from '../../../../assets/images/paste-light2.png'
 import ScrollToTop from '../../../../Layout/ScrollToTop/ScrollToTop';
 
 const Index11 = () => {
@@ -21,15 +20,17 @@ const Index11 = () => {
                 otherClass='header-orange-modify1'
                 containerFluid={'-fluid3'}
                 callIcon={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
-                bgColor={'#70bf4a'}
+                bgColor={'#ff6314'}
                 hoverColor={'#010d14'}
             />
             <Index11Main />
             <Footer
-                logo={footerLogo}
-                footerStyle={'footer-style7'}
+                logo={headerLogoNormal}
+                footerStyle={'footer-style8'}
             />
         </>
     );

@@ -18,6 +18,8 @@ const Index2 = () => {
                 middleHeader={true}
                 logoMidl={headerLogoNormal}
                 btnQuite2={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#FFB703'}

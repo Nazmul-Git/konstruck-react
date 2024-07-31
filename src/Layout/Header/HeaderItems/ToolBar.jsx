@@ -5,7 +5,7 @@ const ToolBar = ({ topBarModifyClass, phnNumber, mail, address, textOnly, phnNum
     return (
         <>
             <div className={`toolbar-area topbar-style1 ${topBarModifyClass ? topBarModifyClass : ''} hidden-md`}>
-                <div className={`container${containerFluid && containerFluid}`}>
+                <div className={`container${containerFluid ? containerFluid : ''}`}>
                     <div className="row rs-vertical-middle">
                         <div className="col-lg-7">
                             <div className="toolbar-contact">

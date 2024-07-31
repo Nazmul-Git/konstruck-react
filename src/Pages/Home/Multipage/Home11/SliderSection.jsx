@@ -50,10 +50,10 @@ const SliderSection = () => {
 
     return (
         <div className="rs-slider slider-style10">
-            <div class="slider slider-slide-1">
+            <div className="slider slider-slide-1">
                 <Slider {...settings}>
-                    {sliderData.map(slide => (
-                        <div key={slide.id} className="slider-item">
+                    {sliderData.map((slide,index) => (
+                        <div key={index} className="slider-item">
                             <div className="container custom13">
                                 <BannerSlider4
                                     slide={slide}

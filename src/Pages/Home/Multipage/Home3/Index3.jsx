@@ -15,6 +15,8 @@ const Index3 = () => {
                 topBarVisible={false}
                 searchIcon={true}
                 btnQuite1={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#FFB703'}

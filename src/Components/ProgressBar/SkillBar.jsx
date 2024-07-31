@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 
-const SkillBar = ({ percentage, label }) => {
+const SkillBar = ({ percentage }) => {
     const skillBarRef = useRef(null);
     const skillBarBarRef = useRef(null);
     const skillBarPercentRef = useRef(null);

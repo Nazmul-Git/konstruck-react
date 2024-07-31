@@ -20,6 +20,8 @@ const Index7 = () => {
                 address={true}
                 mail={true}
                 isPhnNumber={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#21c0f5'}

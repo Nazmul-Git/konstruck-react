@@ -8770,8 +8770,8 @@ body {
 	    			    font-weight: 500;
 	    			    color: $white-color;
 	    			    margin: 0;
-	    			    content: "\f110";
-	    			    font-family: Flaticon;
+	    			    content: "\ea6c";
+	    			    font-family: remixicon!important;
 	    			    text-align: center;
 	    			}
 	    		}
@@ -8783,8 +8783,8 @@ body {
 	    			    font-weight: 500;
 	    			    color: $white-color;
 	    			    margin: 0;
-	    			    content: "\f111";
-	    			    font-family: Flaticon;
+	    			    content: "\ea60";
+	    			    font-family: remixicon!important;
 	    			    text-align: center;
 	    			}
 	    		}
@@ -8799,6 +8799,10 @@ body {
 	    			}
 	    		}
 	    	}
+			.slick-prev {
+				left: 1475px;
+			}
+			
 	    	.slick-list{
 	    		padding: 0 0 0  !important;
 	    	}

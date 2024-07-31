@@ -9,7 +9,8 @@ const Service5 = ({ service }) => {
             </div>
             <div className="services-text">
                 <div className="services-title">
-                    <h3 className="title"><Link to={service.Link}>{service.title}</Link>
+                    <h3 className="title">
+                        <Link to={service.Link}>{service.title}</Link>
                     </h3>
                 </div>
             </div>

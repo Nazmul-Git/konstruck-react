@@ -19,6 +19,8 @@ const Index10 = () => {
                 headerStyle='header-style2 '
                 otherClass='header-paste-modify1'
                 callIcon={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#70bf4a'}

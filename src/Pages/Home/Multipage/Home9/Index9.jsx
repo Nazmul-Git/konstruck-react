@@ -22,6 +22,8 @@ const Index9 = () => {
                 searchIcon={true}
                 btnQuite1={true}
                 btnQuite1Icon={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#ba9071'}

@@ -21,6 +21,8 @@ const Index5 = () => {
                 topBarModifyClass='topber-modify2'
                 searchIcon={true}
                 btnQuite1={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
             />
             <ScrollToTop
                 bgColor={'#e8271e'}

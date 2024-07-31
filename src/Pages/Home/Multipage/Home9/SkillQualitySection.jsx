@@ -3,9 +3,9 @@ import skillImage from '../../../../assets/images/skillbar/skill-1.png';
 import SkillBar from '../../../../Components/ProgressBar/SkillBar';
 
 const skills = [
-    { title: 'Interior Design', percent: '80%' },
-    { title: 'Outdoor Design', percent: '70%' },
-    { title: 'Indoor Design', percent: '95%' }
+    { label: 'Interior Design', percent: '80%' },
+    { label: 'Outdoor Design', percent: '70%' },
+    { label: 'Indoor Design', percent: '95%' }
 ];
 
 const handleMouseMove = (e) => {
@@ -52,10 +52,12 @@ const SkillQualitySection = () => {
                         <div className="rs-skillbar skillbar-style1 skillbar-modify3">
                             <div className="cl-skill-bar">
                                 {skills.map((skill, index) => (
-                                    <SkillBar
-                                        key={index}
-                                        percentage={skill.percent}
-                                    />
+                                    <div key={index}>
+                                        <span className="skillbar-title">{skill.label}</span>
+                                        <SkillBar
+                                            percentage={skill.percent}
+                                        />
+                                    </div>
                                 ))}
                             </div>
                         </div>

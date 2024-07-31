@@ -5,7 +5,7 @@ import ToolBar from './HeaderItems/ToolBar';
 import MiddleHeader from './HeaderItems/MiddleHeader';
 import RightMenuToggle from './HeaderItems/RightToggleMenu';
 
-const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon, otherClass, modifyClassMidl, logoMidl, mail, address, textOnly, boxLayout,btnQuite1Icon, containerFluid, phnNumberFirst }) => {
+const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader, searchIcon, btnQuite1, btnQuite2, socialIcon, isPhnNumber, topBarModifyClass, callIcon, otherClass, modifyClassMidl, logoMidl, mail, address, textOnly, boxLayout, btnQuite1Icon, containerFluid, phnNumberFirst, firstLvlMenu, secondLvlMenu }) => {
     const [searchValue, setSearchValue] = useState('');
     const [isSticky, setSticky] = useState(false);
     const [navExpanded, setNavExpanded] = useState(false);
@@ -73,7 +73,7 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
 
                 {/* Menu Start */}
                 <div className={`menu-area menu-sticky ${isSticky ? 'sticky' : ''}`} >
-                    <div className={`container${containerFluid && containerFluid} ${boxLayout ? boxLayout : ''}`}>
+                    <div className={`container${containerFluid ? containerFluid : ''} ${boxLayout ? boxLayout : ''}`}>
                         <div className="row-table">
                             <div className="col-cell header-logo">
                                 <div className="logo-area">
@@ -88,7 +88,10 @@ const Header = ({ normalLogo, darkLogo, topBarVisible, headerStyle, middleHeader
                                     <div className="main-menu">
                                         <nav className="rs-menu hidden-md">
                                             <ul className="nav-menu">
-                                                <MenuItems />
+                                                <MenuItems
+                                                    firstLvlMenu={firstLvlMenu}
+                                                    secondLvlMenu={secondLvlMenu}
+                                                />
                                             </ul>
                                             {/* //.nav-menu */}
                                         </nav>

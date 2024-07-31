@@ -19,6 +19,10 @@ const Index1 = () => {
                 address={true}
                 searchIcon={true}
                 btnQuite1={true}
+                firstLvlMenu="home"
+                secondLvlMenu="multipages"
+                
+
             />
             <ScrollToTop
                 bgColor={'#FFB703'}
