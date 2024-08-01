@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import shapeImage from '../../../../assets/images/shape-1.png'; // Import shape image
-import ProgressBar from '../../../../Components/ProgressBar/ProgressBar';
+import shapeImage from '../../../../assets/images/shape-1.png'; 
 import { Link } from 'react-router-dom';
 import VideoPopUp from '../../../../Components/Modal/VideoPopUp';
+import SkillBar from '../../../../Components/ProgressBar/SkillBar';
 
 const ChooseUsSection = () => {
-    
     const [isVideoOpen, setVideoOpen] = useState(false);
     const openVideoPopup = () => setVideoOpen(true);
     const closeVideoPopup = () => setVideoOpen(false);
+
     // Example data for services
     const services = [
         { id: 1, title: 'Best sustainability' },
@@ -17,6 +17,11 @@ const ChooseUsSection = () => {
         { id: 4, title: 'Certified engineer' }
     ];
 
+    // Skill data with percentages
+    const skillData = [
+        { title: 'Working Skill', percentage: '90%' },
+        { title: 'Client Rating', percentage: '95%' },
+    ];
 
     return (
         <div className="rs-choose choose-style1">
@@ -57,7 +62,6 @@ const ChooseUsSection = () => {
                                                     <h4 className="title">{service.title}</h4>
                                                 </div>
                                             </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -66,24 +70,20 @@ const ChooseUsSection = () => {
                         <div className="working-skill-part pt-50">
                             <div className="row y-middle">
                                 <div className="col-lg-4">
-                                    <div className="title-inner mb-10">
-                                        <h4 className="title">Working skill</h4>
-                                    </div>
-                                    <div className="title-inner">
-                                        <h4 className="title">Client rating</h4>
-                                    </div>
+                                    {skillData.map((skill, index) => (
+                                        <div key={index} className="title-inner mb-10">
+                                            <h4 className="title">{skill.title}</h4>
+                                        </div>
+                                    ))}
                                 </div>
                                 <div className="col-lg-8">
                                     <div className="rs-skillbar skillbar-style1 mb-10">
                                         <div className="cl-skill-bar">
-                                            {/* Start Skill Bar */}
-                                            <ProgressBar
-                                                targetProgress={95}
-                                                bgBarColor={'#E8EAEE'}
-                                                bgBarProgressColor={'#FFB703'}
-                                                duration={2000}
-                                                barPercentageText={95}
-                                            />
+                                            {skillData.map((skill, index) => (
+                                                <div key={index} className="skill-bar-item">
+                                                    <SkillBar percentage={skill.percentage} />
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                     <ul className="icon-list-item">
@@ -95,7 +95,7 @@ const ChooseUsSection = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <p className="view-result pt-15">5.00 Average Based On 50 Rating – <Link to="#"><span>More information</span></Link></p>
+                            <p className="view-result pt-15">5.00 Average Based On 50 Ratings – <Link to="#"><span>More information</span></Link></p>
                         </div>
                     </div>
                 </div>

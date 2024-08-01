@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Service3 = ({ service, serviceImageClass, serviceMainCls, serviceContCls, imgWithAncor,titleWithAncor, btnStyle, linkCls, btnIcon }) => {
     return (
-        <div className={`${serviceMainCls ? serviceMainCls : "services-item"}`}>
+        <div className={`${serviceMainCls ? serviceMainCls : "services-item"} ${service.extraClass ? service.extraClass : ''}`}>
             <div className={`${serviceImageClass ? serviceImageClass : "services-icon"}`}>
                 {
                     service.img && imgWithAncor ?
@@ -33,6 +33,10 @@ const Service3 = ({ service, serviceImageClass, serviceMainCls, serviceContCls, 
                 {
                     service.description &&
                     <p className="services-txt">{service.description}</p>
+                }
+                {
+                    service.description1 && service.description2 &&
+                    <p className="services-txt">{service.description1} <br/> {service.description2}</p>
                 }
                 {
                     service.serviceBtn || btnIcon &&

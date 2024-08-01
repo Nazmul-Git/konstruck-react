@@ -1,16 +1,14 @@
 import React from 'react';
+import SkillBar from '../../../../Components/ProgressBar/SkillBar';
 
-// Import the choose image
-import ProgressBar from '../../../../Components/ProgressBar/ProgressBar';
+const SkillSection = () => {
+    const skills = [
+        { title: 'Builders', percentage: '95%' },
+        { title: 'Construction', percentage: '90%' },
+        { title: 'House Renovation', percentage: '85%' },
+        { title: 'Painting', percentage: '85%' },
+    ];
 
-const skills = [
-    { title: 'Builders', percent: 95 },
-    { title: 'Construction', percent: 90 },
-    { title: 'House Renovation', percent: 85 },
-    { title: 'Painting', percent: 85 }
-];
-
-const WhyChooseSection = () => {
     return (
         <div className="rs-choose choose-style2">
             <div className="row no-gutters">
@@ -31,25 +29,20 @@ const WhyChooseSection = () => {
                                 {skills.map((skill, index) => (
                                     <div key={index}>
                                         <span className="skillbar-title">{skill.title}</span>
-                                        <ProgressBar
-                                            targetProgress={skill.percent}
-                                            bgBarColor={'#E8EAEE'}
-                                            bgBarProgressColor={'#FFB703'}
-                                            duration={2000}
-                                            barPercentageText={true}
-                                        />
+                                        <SkillBar percentage={skill.percentage} />
                                     </div>
-
                                 ))}
                             </div>
                         </div>
                         {/* Skillbar Section End */}
                     </div>
                 </div>
-                <div className="col-lg-7 choose-img"></div>
+                <div className="col-lg-7 choose-img">
+                    {/* Optional content for the right column */}
+                </div>
             </div>
         </div>
     );
 };
 
-export default WhyChooseSection;
+export default SkillSection;

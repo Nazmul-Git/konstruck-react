@@ -6,6 +6,12 @@ const BlogCard = ({ blog, btnClass, btnIcon, index, blogBtn, titleFirst, titleLa
     return (
         <div className="blog-item">
             <div className="image-wrap">
+                {
+                    blog.categoryTitle &&
+                    <ul className="post-categories">
+                        <li><Link to="/blog-single">{blog.categoryTitle}</Link></li>
+                    </ul>
+                }
                 <Link to={blog.link}>
                     <img src={blog.image} alt={`Blog ${index + 1}`} />
                 </Link>

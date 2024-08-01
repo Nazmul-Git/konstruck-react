@@ -1,12 +1,14 @@
 import React from 'react';
 import aboutImage from '../../../../assets/images/about/about-7.jpg';
-import ProgressBar from '../../../../Components/ProgressBar/ProgressBar';
+import SkillBar from '../../../../Components/ProgressBar/SkillBar';
 import { Link } from 'react-router-dom';
+
 const AboutSection = () => {
     const skills = [
-        { title: 'Warehousing Solutions', percent: 80 },
-        { title: 'Transport Solutions', percent: 95 },
+        { title: 'Warehousing Solutions', percent: '80%' },
+        { title: 'Transport Solutions', percent: '95%' },
     ];
+
     return (
         <div className="rs-about about-style3 blue-bg3 pt-120 pb-120 md-pt-80 md-pb-75">
             <div className="container">
@@ -31,13 +33,7 @@ const AboutSection = () => {
                                     {skills.map((skill, index) => (
                                         <div key={index}>
                                             <span className="skillbar-title">{skill.title}</span>
-                                            <ProgressBar
-                                                targetProgress={skill.percent}
-                                                bgBarColor={'#eee'}
-                                                bgBarProgressColor={'#21C0F5'}
-                                                duration={2000}
-                                                barPercentageText={true}
-                                            />
+                                            <SkillBar percentage={skill.percent} />
                                         </div>
                                     ))}
                                 </div>

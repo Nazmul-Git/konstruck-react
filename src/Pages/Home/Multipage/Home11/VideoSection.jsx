@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import VideoPopUp from '../../../../Components/Modal/VideoPopUp';
 import { Link } from 'react-router-dom';
+import VideoPopUp from '../../../../Components/Modal/VideoPopUp';
 
 const VideoSection = () => {
     const [isVideoOpen, setVideoOpen] = useState(false);
